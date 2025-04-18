@@ -1,0 +1,22 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+- caption: Course Info
+  chapters:
+  - file: syllabus.md
+  - file: schedule.md
+  - file: faq.md
+
+- caption: Assignments
+  chapters:
+  - glob: HW*
+
+- caption: Supplementary
+  chapters:
+  - file: videos.md
+  - file: Readings.md
+  
+  
