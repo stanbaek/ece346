@@ -1,4 +1,4 @@
-# ECE 346 Engineering Mathematics with ECE Applications
+# ECE 346 Engineering Math
 
 
 ## 👨‍🏫 Instructors
