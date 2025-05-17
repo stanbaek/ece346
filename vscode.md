@@ -15,6 +15,7 @@ the settings.json file should be changed.
 
 {
     "python.envFile": "${workspaceFolder}/.venv",
+    "python.terminal.activateEnvironment": true,
     "python.terminal.activateEnvInCurrentTerminal": true,
 
     "git.autofetch": true,
