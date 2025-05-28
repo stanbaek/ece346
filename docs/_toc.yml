@@ -16,7 +16,6 @@ parts:
 
 - caption: Supplementary
   chapters:
-  - file: videos.md
-  - file: Readings.md
+  - file: glossary.md
   
   
