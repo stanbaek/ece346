@@ -379,7 +379,16 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inference-reasoning">Inference (Reasoning)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#validity-valid">Validity (Valid)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#glossary-of-proof-related-terms">Glossary of Proof-Related Terms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem">Theorem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proposition-in-proof-context">Proposition (in proof context)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proof">Proof</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#axiom">Axiom</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lemma">Lemma</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#corollary">Corollary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conjecture">Conjecture</a></li>
 </ul>
 </li>
 </ul>
@@ -413,10 +422,10 @@
 <p>A <strong>predicate</strong> is a function or property that returns a truth value when applied to one or more subjects. In logic, it expresses something about an object or variable, often written as ( P(x) ).</p>
 <p><strong>Examples:</strong></p>
 <ul class="simple">
-<li><p>In “Socrates is mortal”, “is mortal” is the predicate and “Socrates” is the subject. In predicate logic: ( \text{Mortal}(x) )</p></li>
-<li><p>( \text{IsTall}(x) ): “x is tall”</p></li>
-<li><p>( \text{Loves}(x, y) ): “x loves y”</p></li>
-<li><p>( \text{Prime}(n) ): “n is a prime number”</p></li>
+<li><p>In “Socrates is mortal”, “is mortal” is the predicate and “Socrates” is the subject. In predicate logic: Mortal(x)</p></li>
+<li><p>IsTall(x): “x is tall”</p></li>
+<li><p>Loves(x, y): “x loves y”</p></li>
+<li><p>Prime(n): “n is a prime number”</p></li>
 </ul>
 </section>
 <hr class="docutils" />
@@ -434,21 +443,18 @@
 <section id="argument">
 <h3>Argument<a class="headerlink" href="#argument" title="Link to this heading">#</a></h3>
 <p>An <strong>argument</strong> is a group of propositions in which some (premises) are intended to support another (conclusion). It’s the fundamental structure of reasoning.</p>
-<p><strong>Examples:</strong>
-1.</p>
+<p><strong>Example 1:</strong></p>
 <ul class="simple">
 <li><p>Premise: All birds have feathers.</p></li>
 <li><p>Premise: A sparrow is a bird.</p></li>
 <li><p>Conclusion: Therefore, a sparrow has feathers.</p></li>
 </ul>
-<ol class="arabic simple" start="2">
-<li><ul class="simple">
+<p><strong>Example 1:</strong></p>
+<ul class="simple">
 <li><p>Premise: If you study, you will pass.</p></li>
 <li><p>Premise: You studied.</p></li>
 <li><p>Conclusion: Therefore, you will pass.</p></li>
 </ul>
-</li>
-</ol>
 </section>
 <hr class="docutils" />
 <section id="conclusion">
@@ -498,15 +504,81 @@
 </li>
 </ol>
 </section>
+</section>
+<hr class="docutils" />
+<section id="glossary-of-proof-related-terms">
+<h2>Glossary of Proof-Related Terms<a class="headerlink" href="#glossary-of-proof-related-terms" title="Link to this heading">#</a></h2>
+<section id="theorem">
+<h3>Theorem<a class="headerlink" href="#theorem" title="Link to this heading">#</a></h3>
+<p>A <strong>theorem</strong> is a mathematical or logical statement that has been proven to be true based on previously established statements such as axioms, definitions, and earlier theorems.</p>
+<p><strong>Examples:</strong></p>
+<ul class="simple">
+<li><p>Pythagorean Theorem: ( a^2 + b^2 = c^2 )</p></li>
+<li><p>Fundamental Theorem of Calculus</p></li>
+<li><p>Gödel’s Incompleteness Theorems</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="proposition-in-proof-context">
+<h3>Proposition (in proof context)<a class="headerlink" href="#proposition-in-proof-context" title="Link to this heading">#</a></h3>
+<p>A <strong>proposition</strong> in the context of proofs is a statement that is proved true using logic and previously proven statements. It is often considered less central or less important than a theorem.</p>
+<p><strong>Examples:</strong></p>
+<ul class="simple">
+<li><p>In some texts, a small result that is still worth proving may be called a proposition.</p></li>
+<li><p>“Every finite group of prime order is cyclic.”</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="proof">
+<h3>Proof<a class="headerlink" href="#proof" title="Link to this heading">#</a></h3>
+<p>A <strong>proof</strong> is a logical argument demonstrating the truth of a theorem or proposition, using deductive reasoning from accepted premises, axioms, and previously established results.</p>
+<p><strong>Examples:</strong></p>
+<ul class="simple">
+<li><p>A direct proof using definitions and logical steps.</p></li>
+<li><p>A proof by contradiction assuming the opposite and deriving a contradiction.</p></li>
+<li><p>An inductive proof involving base cases and inductive steps.</p></li>
+</ul>
+</section>
 <hr class="docutils" />
 <section id="axiom">
 <h3>Axiom<a class="headerlink" href="#axiom" title="Link to this heading">#</a></h3>
-<p>An <strong>axiom</strong> is a self-evident or universally accepted principle that doesn’t require proof, used as a starting point in reasoning or mathematical systems.</p>
+<p>An <strong>axiom</strong> (or <strong>postulate</strong>) is a self-evident or universally accepted principle that does not require proof. It serves as a starting point for logical or mathematical reasoning.</p>
 <p><strong>Examples:</strong></p>
 <ul class="simple">
-<li><p>In arithmetic: “For every number ( x ), ( x = x )” (identity)</p></li>
-<li><p>In geometry: “Through any two distinct points, there is exactly one line.”</p></li>
-<li><p>In set theory: “A set is determined by its elements.”</p></li>
+<li><p>In geometry: “Through any two points, there exists exactly one line.”</p></li>
+<li><p>In arithmetic: “For any number ( a ), ( a + 0 = a ).”</p></li>
+<li><p>In set theory: “Two sets are equal if they contain the same elements.”</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="lemma">
+<h3>Lemma<a class="headerlink" href="#lemma" title="Link to this heading">#</a></h3>
+<p>A <strong>lemma</strong> is a proven statement used as a stepping stone to prove a larger result (typically a theorem). While it may be useful in its own right, its main role is as a helper theorem.</p>
+<p><strong>Examples:</strong></p>
+<ul class="simple">
+<li><p>Euclid’s Lemma: If a prime divides a product, it divides at least one factor.</p></li>
+<li><p>Schwarz’s Lemma in complex analysis.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="corollary">
+<h3>Corollary<a class="headerlink" href="#corollary" title="Link to this heading">#</a></h3>
+<p>A <strong>corollary</strong> is a statement that follows readily and with little or no additional proof from a previously proven theorem or proposition.</p>
+<p><strong>Examples:</strong></p>
+<ul class="simple">
+<li><p>Corollary to the Pythagorean Theorem: If two sides of a triangle are perpendicular, the square of the hypotenuse equals the sum of the squares of the other two sides.</p></li>
+<li><p>Corollary: Every finite subgroup of the multiplicative group of a field is cyclic.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="conjecture">
+<h3>Conjecture<a class="headerlink" href="#conjecture" title="Link to this heading">#</a></h3>
+<p>A <strong>conjecture</strong> is a statement that is believed to be true based on observations or evidence but has not yet been proven or disproven.</p>
+<p><strong>Examples:</strong></p>
+<ul class="simple">
+<li><p>Goldbach’s Conjecture: Every even integer greater than 2 is the sum of two primes.</p></li>
+<li><p>Collatz Conjecture</p></li>
+<li><p>Twin Prime Conjecture</p></li>
 </ul>
 </section>
 </section>
@@ -576,7 +648,16 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inference-reasoning">Inference (Reasoning)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#validity-valid">Validity (Valid)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#glossary-of-proof-related-terms">Glossary of Proof-Related Terms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem">Theorem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proposition-in-proof-context">Proposition (in proof context)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proof">Proof</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#axiom">Axiom</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lemma">Lemma</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#corollary">Corollary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conjecture">Conjecture</a></li>
 </ul>
 </li>
 </ul>
