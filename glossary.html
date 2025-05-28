@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>📃 Readings &#8212; Engineering Math</title>
+    <title>📘 Glossary &#8212; Engineering Math</title>
   
   
   
@@ -16,31 +16,34 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=4c969af8" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -59,13 +62,14 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Readings';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'glossary';</script>
     <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="🎥 Videos" href="videos.html" />
+    <link rel="prev" title="🙋 FAQ" href="faq.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -81,19 +85,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -101,7 +94,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -109,8 +101,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -126,7 +118,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -156,21 +149,17 @@
     
     
     <img src="_static/ece346.png" class="logo__image only-light" alt="Engineering Math - Home"/>
-    <script>document.write(`<img src="_static/ece346.png" class="logo__image only-dark" alt="Engineering Math - Home"/>`);</script>
+    <img src="_static/ece346.png" class="logo__image only-dark pst-js-only" alt="Engineering Math - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -189,8 +178,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Supplementary</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="videos.html">🎥 Videos</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">📃 Readings</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">📘 Glossary</a></li>
 </ul>
 
     </div>
@@ -199,9 +187,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -262,7 +255,7 @@
       
       
       
-      <li><a href="https://github.com/stanbaek/ece346/issues/new?title=Issue%20on%20page%20%2FReadings.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/stanbaek/ece346/issues/new?title=Issue%20on%20page%20%2Fglossary.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -292,7 +285,7 @@
       
       
       
-      <li><a href="_sources/Readings.md" target="_blank"
+      <li><a href="_sources/glossary.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -345,24 +338,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -376,7 +361,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>📃 Readings</h1>
+    <h1>📘 Glossary</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -386,7 +371,17 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning">Machine Learning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#glossary-of-logical-terms">Glossary of Logical Terms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proposition">Proposition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#predicate">Predicate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#premise">Premise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#argument">Argument</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inference-reasoning">Inference (Reasoning)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#validity-valid">Validity (Valid)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#axiom">Axiom</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -398,21 +393,122 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="readings">
-<h1>📃 Readings<a class="headerlink" href="#readings" title="Link to this heading">#</a></h1>
-<section id="machine-learning">
-<h2>Machine Learning<a class="headerlink" href="#machine-learning" title="Link to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="glossary">
+<h1>📘 Glossary<a class="headerlink" href="#glossary" title="Link to this heading">#</a></h1>
+<section id="glossary-of-logical-terms">
+<h2>Glossary of Logical Terms<a class="headerlink" href="#glossary-of-logical-terms" title="Link to this heading">#</a></h2>
+<section id="proposition">
+<h3>Proposition<a class="headerlink" href="#proposition" title="Link to this heading">#</a></h3>
+<p>A <strong>proposition</strong> is a declarative statement that is either <em>true</em> or <em>false</em>, but not both. It represents the content of a statement regardless of its linguistic form.</p>
+<p><strong>Examples:</strong></p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.skeptic.com/reading_room/importance-of-uncertainty-in-human-compatible-artificial-intelligence/">AI and Uncertainty by Maggie Jackson</a></p></li>
-<li><p><a class="reference external" href="https://engineering.mit.edu/engage/ask-an-engineer/when-will-ai-be-smart-enough-to-outsmart-people/">When will AI be smart enough to outsmart people? by Carolyn Blais</a></p></li>
-<li><p><a class="reference external" href="https://hbr.org/2022/09/ai-isnt-ready-to-make-unsupervised-decisions">AI Isn’t Ready to Make Unsupervised Decisions by Joe McKendrick and Andy Thurai</a></p></li>
-<li><p><a class="reference external" href="https://www.skeptic.com/reading_room/why-should-we-pursue-human-intelligence-with-artificial-intelligence/">Why Should We Pursue Human Intelligence With AI? by Rudy van Belkom</a></p></li>
-<li><p><a class="reference external" href="https://www.skeptic.com/reading_room/artificial-intelligence-will-not-replace-but-devalue-artists/#:~:text=Art%20will%20not%20be%20replaced,necessary%20part%20of%20their%20livelihood.">AI Will Not Replace Artists. It Will Devalue Them. by Kate Brunotts</a></p></li>
-<li><p>AI Are People, Too — It’s Time We Recognize Their Human Rights with Glenn Gohen (Video)</p></li>
+<li><p>“The Earth orbits the Sun” is a proposition because it can be evaluated as true.</p></li>
+<li><p>“The Moon is made of cheese.” (False)</p></li>
+<li><p>“2 + 2 = 4” (True)</p></li>
 </ul>
-<center>
-<iframe src="//content.jwplatform.com/players/4SF2mgmw-FvQKszTI.html" width="640" height="360" frameborder="0" scrolling="auto"></iframe>
-</center>
+</section>
+<hr class="docutils" />
+<section id="predicate">
+<h3>Predicate<a class="headerlink" href="#predicate" title="Link to this heading">#</a></h3>
+<p>A <strong>predicate</strong> is a function or property that returns a truth value when applied to one or more subjects. In logic, it expresses something about an object or variable, often written as ( P(x) ).</p>
+<p><strong>Examples:</strong></p>
+<ul class="simple">
+<li><p>In “Socrates is mortal”, “is mortal” is the predicate and “Socrates” is the subject. In predicate logic: ( \text{Mortal}(x) )</p></li>
+<li><p>( \text{IsTall}(x) ): “x is tall”</p></li>
+<li><p>( \text{Loves}(x, y) ): “x loves y”</p></li>
+<li><p>( \text{Prime}(n) ): “n is a prime number”</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="premise">
+<h3>Premise<a class="headerlink" href="#premise" title="Link to this heading">#</a></h3>
+<p>A <strong>premise</strong> is a proposition that provides support or reasons for a conclusion in an argument. Premises are the starting points of reasoning.</p>
+<p><strong>Examples:</strong></p>
+<ul class="simple">
+<li><p>“All mammals are warm-blooded.”</p></li>
+<li><p>“If it rains, the ground gets wet.”</p></li>
+<li><p>“Jane is taller than Tom.”</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="argument">
+<h3>Argument<a class="headerlink" href="#argument" title="Link to this heading">#</a></h3>
+<p>An <strong>argument</strong> is a group of propositions in which some (premises) are intended to support another (conclusion). It’s the fundamental structure of reasoning.</p>
+<p><strong>Examples:</strong>
+1.</p>
+<ul class="simple">
+<li><p>Premise: All birds have feathers.</p></li>
+<li><p>Premise: A sparrow is a bird.</p></li>
+<li><p>Conclusion: Therefore, a sparrow has feathers.</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><ul class="simple">
+<li><p>Premise: If you study, you will pass.</p></li>
+<li><p>Premise: You studied.</p></li>
+<li><p>Conclusion: Therefore, you will pass.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="conclusion">
+<h3>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h3>
+<p>A <strong>conclusion</strong> is the proposition that is supported or proven by the premises in an argument.</p>
+<p><strong>Examples:</strong></p>
+<ul class="simple">
+<li><p>“Therefore, the Earth is round.” (based on previous evidence/premises)</p></li>
+<li><p>“Hence, she must be at home.”</p></li>
+<li><p>“It follows that all bachelors are unmarried.”</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="inference-reasoning">
+<h3>Inference (Reasoning)<a class="headerlink" href="#inference-reasoning" title="Link to this heading">#</a></h3>
+<p><strong>Inference</strong>, or <strong>reasoning</strong>, is the process of deriving logical conclusions from premises or known facts.</p>
+<p><strong>Examples:</strong></p>
+<ul class="simple">
+<li><p>From “All dogs bark” and “Rex is a dog,” we infer “Rex barks.”</p></li>
+<li><p>From “If the light is red, stop” and “The light is red,” infer “Stop.”</p></li>
+<li><p>From “All metals conduct electricity” and “Copper is a metal,” infer “Copper conducts electricity.”</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="validity-valid">
+<h3>Validity (Valid)<a class="headerlink" href="#validity-valid" title="Link to this heading">#</a></h3>
+<p>An argument is <strong>valid</strong> if the conclusion necessarily follows from the premises. Validity is about form, not the actual truth of the statements.</p>
+<p><strong>Examples:</strong>
+1.</p>
+<ul class="simple">
+<li><p>Premise: All cats are animals.</p></li>
+<li><p>Premise: Felix is a cat.</p></li>
+<li><p>Conclusion: Felix is an animal. ✅ Valid</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><ul class="simple">
+<li><p>Premise: All unicorns are reptiles.</p></li>
+<li><p>Premise: Bob is a unicorn.</p></li>
+<li><p>Conclusion: Bob is a reptile. ✅ Valid (though premises are false)</p></li>
+</ul>
+</li>
+<li><ul class="simple">
+<li><p>Premise: Some dogs are brown.</p></li>
+<li><p>Premise: Rex is brown.</p></li>
+<li><p>Conclusion: Rex is a dog. ❌ Invalid (conclusion doesn’t logically follow)</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="axiom">
+<h3>Axiom<a class="headerlink" href="#axiom" title="Link to this heading">#</a></h3>
+<p>An <strong>axiom</strong> is a self-evident or universally accepted principle that doesn’t require proof, used as a starting point in reasoning or mathematical systems.</p>
+<p><strong>Examples:</strong></p>
+<ul class="simple">
+<li><p>In arithmetic: “For every number ( x ), ( x = x )” (identity)</p></li>
+<li><p>In geometry: “Through any two distinct points, there is exactly one line.”</p></li>
+<li><p>In set theory: “A set is determined by its elements.”</p></li>
+</ul>
+</section>
 </section>
 </section>
 
@@ -447,12 +543,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="videos.html"
+       href="faq.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">🎥 Videos</p>
+        <p class="prev-next-title">🙋 FAQ</p>
       </div>
     </a>
 </div>
@@ -462,7 +558,8 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -471,7 +568,17 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning">Machine Learning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#glossary-of-logical-terms">Glossary of Logical Terms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proposition">Proposition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#predicate">Predicate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#premise">Premise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#argument">Argument</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inference-reasoning">Inference (Reasoning)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#validity-valid">Validity (Valid)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#axiom">Axiom</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
@@ -520,8 +627,8 @@ By Stan Baek
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>
