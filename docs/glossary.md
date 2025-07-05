@@ -1,4 +1,4 @@
-# 📘 Glossary
+# 📖 Glossary
 
 ## Glossary of Logical Terms
 
